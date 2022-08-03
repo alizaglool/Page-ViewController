@@ -10,9 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDescription: UITextView!
+    var pagetitle : String? , pageDescrption : String?
+    var pageColor : UIColor?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if let Title = pagetitle {
+          lblTitle.text = Title
+        }
+        if let Descripyion = pageDescrption {
+            lblDescription.text = Descripyion
+        }
+        if let Color = pageColor {
+            self.view.backgroundColor = Color
+        }
+        
     }
 
 
